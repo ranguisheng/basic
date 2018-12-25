@@ -1,0 +1,3 @@
+hystrix.timeoutInMillions: 5000
+hello.msg: helloworld
+my.key: hello.msg
