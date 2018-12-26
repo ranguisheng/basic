@@ -8,16 +8,16 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-//@SpringBootApplication
-//@EnableCircuitBreaker
-//@EnableHystrixDashboard
+@SpringBootApplication
+@EnableCircuitBreaker
+@EnableHystrixDashboard
 public class Application {
-//    @Bean
-//    @LoadBalanced
-//    public RestTemplate restTemplate(){
-//        return new RestTemplate();
-//    }
-//    public static void main(String[] args) {
-//        SpringApplication.run(Application.class,args);
-//    }
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class,args);
+    }
 }

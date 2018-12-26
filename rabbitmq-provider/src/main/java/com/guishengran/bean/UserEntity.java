@@ -1,12 +1,8 @@
 package com.guishengran.bean;
 
 import lombok.Data;
-import org.hibernate.annotations.Entity;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
