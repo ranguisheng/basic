@@ -1,6 +1,37 @@
-spring:
-  jpa:
-    properties:
-    hibernate:
-    show-sql: true
-    format_sql: true
+#用户名
+spring.rabbitmq.username: guest
+#密码
+spring.rabbitmq.password: guest
+#服务器ip
+spring.rabbitmq.host: 
+#虚拟空间地址
+spring.rabbitmq.virtual-host: /
+#端口号
+spring.rabbitmq.port: 5672
+#配置发布消息确认回调
+spring.rabbitmq.publisher-confirms: true
+
+#数据源配置
+spring.datasource.type: com.alibaba.druid.pool.DruidDataSource
+spring.datasource.driver-class-name: com.mysql.jdbc.Driver
+spring.datasource.url:
+spring.datasource.username:
+spring.datasource.password:
+spring.datasource.platform: mysql
+spring.datasource.initialSize: 1
+spring.datasource.minIdle: 3
+spring.datasource.maxActive: 20
+spring.datasource.maxWait: 60000
+spring.datasource.timeBetweenEvictionRunsMillis: 60000
+spring.datasource.minEvictableIdleTimeMillis: 30000
+spring.datasource.validationQuery: select 'x'
+spring.datasource.testWhileIdle: true
+spring.datasource.testOnBorrow: false
+spring.datasource.testOnReturn: false
+spring.datasource.poolPreparedStatements: true
+spring.datasource.maxPoolPreparedStatementPerConnectionSize: 20
+spring.datasource.filters: stat,wall,log4j
+spring.datasource.connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+spring.jpa.database: mysql
+spring.jpa.show-sql: true

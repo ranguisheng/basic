@@ -14,7 +14,7 @@ public class UserEntity implements Serializable{
      * 用户编号
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "UI_ID")
     private Long id;
     /**

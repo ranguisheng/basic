@@ -36,7 +36,7 @@ public class UserService {
         /**
          * 将消息写入消息队列
          */
-        queueMessageService.send(userEntity.getId(), ExchangeEnum.USER_REGISTER, QueueEnum.USER_REGISTER);
+        queueMessageService.send(userEntity, ExchangeEnum.USER_REGISTER, QueueEnum.USER_REGISTER);
 
         return userEntity.getId();
     }

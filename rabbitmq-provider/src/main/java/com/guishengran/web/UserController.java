@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+
 /**
  * @Auther: guish
  * @Date: 2018/12/26 07:56
@@ -26,6 +28,10 @@ public class UserController {
      */
     @RequestMapping(value = "/save")
     public UserEntity save(UserEntity userEntity) throws Exception {
+        userEntity.setAge(19);
+        userEntity.setBalance(new BigDecimal(100000000));
+        userEntity.setName("Mr.CEO");
+        userEntity.setUserName("CEO");
         userService.save(userEntity);
         return userEntity;
     }

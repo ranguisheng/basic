@@ -1,5 +1,6 @@
 package com.guishengran.service;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -13,9 +14,9 @@ import org.springframework.stereotype.Component;
 @RabbitListener(queues = "user.register.queue")
 public class UserConsumer {
     @RabbitHandler
-    public void execute(Long userId)
+    public void execute(Object userEntity)
     {
-        System.out.println("用户：" + userId+"，完成了注册");
+        System.out.println("消费者接受到消息："+ JSON.toJSONString(userEntity));
 
         //TODO 自行业务逻辑处理
     }
